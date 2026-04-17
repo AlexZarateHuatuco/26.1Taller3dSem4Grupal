@@ -16,7 +16,7 @@ namespace Taller3dSemana4Grupal26._1
         }
         public override float Hurt()
         {
-            return ActualLife - Damage;
+            return ActualLife - p.Damage;
         }
         public override int GetDamage()
         {
