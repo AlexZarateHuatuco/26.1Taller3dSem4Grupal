@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace claseJugador
 {
-    internal class ClaseJugador
+    internal class ClassPlayer
     {
-        public int vida;
-        public int DañoOcacionado = 5;
+        public int health;
+        public int damageDealt = 5;
 
-        public ClaseJugador(int VIDA, int DAÑOOCACIONADO)
+        public ClassPlayer(int Health, int DamageDealt)
         {
-            vida = VIDA;
-            DañoOcacionado = DAÑOOCACIONADO;
+            health = Health;
+            damageDealt = DamageDealt;
         }
 
-        public int recibirDaño()
+        public int DamageReceived()
         {
-            return vida-3;
+            return health - 3;
         }
         public int dañoOcacionado()
         {
-            return DañoOcacionado;
+            return damageDealt;
         }
     }
 }
