@@ -9,18 +9,18 @@ namespace Taller3dSemana4Grupal26._1
 {
     internal class Enemy
     {
-        protected float ActualLife;
+        protected int ActualLife;
         protected int Damage;
         protected bool isDead;
 
-        public Enemy(float life, int damage)
+        public Enemy(int life, int damage)
         {
             ActualLife = life;
             Damage = damage;
             isDead = false;
         }
 
-        public virtual float GetLife()
+        public virtual int GetLife()
         {
             return ActualLife;
         }
