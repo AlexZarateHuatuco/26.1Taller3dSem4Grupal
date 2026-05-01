@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace Taller3dSemana4Grupal26._1
 {
-    internal class RangeEnemies
+    internal class RangeEnemies : Enemy
     {
-        int Life;
-        int Damage;
-        public override float GetLife()
+        ClaseJugador cj = new ClaseJugador();
+        public override int GetLife()
         {
             return ActualLife;
         }
-        public override float Hurt()
+        public override int Hurt()
         {
-            return ActualLife - p.Damage;
+            return ActualLife - cj.DañoOcacionado;
         }
         public override int GetDamage()
         {
@@ -24,8 +23,15 @@ namespace Taller3dSemana4Grupal26._1
         }
         public override bool IsDead()
         {
-            return isDead;
+            if(ActualLife == 0)
+            {
+                _IsDead = true;
+            }
+            return _IsDead;
         }
-        
+        public void RangeAttack()
+        {
+            Console.WriteLine("Disparo de " + Damage);
+        }
     }
 }
