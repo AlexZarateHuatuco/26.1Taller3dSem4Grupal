@@ -19,10 +19,10 @@ namespace Taller3dSemana4Grupal26._1
             Damage = damage;
             isDead = false;
         }
-
         public virtual int GetLife()
         {
-            return ActualLife;
+            get { return actualLife; }
+            set { actualLife = value; }
         }
         public virtual void Hurt(int amount)
         {
@@ -34,13 +34,14 @@ namespace Taller3dSemana4Grupal26._1
                 isDead = true;
 
             }
+        }
         public virtual int GetDamage()
         {
-            return Damage;
+            return damage;
         }
         public virtual bool IsDead()
         {
-            return isDead;
+            return _IsDead;
         }
     }
 }
