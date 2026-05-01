@@ -21,7 +21,7 @@ namespace claseJugador
         {
             return health - 3;
         }
-        public int dañoOcacionado()
+        public int DealDamage()
         {
             return damageDealt;
         }
