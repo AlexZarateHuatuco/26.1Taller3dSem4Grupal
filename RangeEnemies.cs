@@ -8,26 +8,22 @@ namespace Taller3dSemana4Grupal26._1
 {
     internal class RangeEnemies : Enemy
     {
-        ClaseJugador cj = new ClaseJugador();
-        public override int GetLife()
+        public RangeEnemies(int life, int damage) : base(life, damage)
         {
-            return ActualLife;
+            ActualLife = life;
+            Damage = damage;
+            isDead = false;
         }
-        public override int Hurt()
+
+        public override void Hurt(int amount)
         {
-            return ActualLife - cj.DañoOcacionado;
-        }
-        public override int GetDamage()
-        {
-            return Damage;
-        }
-        public override bool IsDead()
-        {
-            if(ActualLife == 0)
+            ActualLife -= amount;
+
+            if (ActualLife <= 0)
             {
-                _IsDead = true;
+                ActualLife = 0;
+                isDead = true;
             }
-            return _IsDead;
         }
         public void RangeAttack()
         {
